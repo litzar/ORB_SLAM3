@@ -44,7 +44,10 @@ endif()
 MESSAGE("OPENCV VERSION:")
 MESSAGE(${OpenCV_VERSION})
 
-find_package(Eigen3 3.1.0 REQUIRED)
+#find_package(Eigen3 3.1.0 REQUIRED)
+set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
+include_directories($ {EIGEN3_INCLUDE_DIRS})
+find_package(Eigen REQUIRED)
 find_package(Pangolin REQUIRED)
 
 include_directories(
